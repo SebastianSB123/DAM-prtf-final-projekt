@@ -1,0 +1,84 @@
+---
+title: "Witch trials in Denmark pre and post the 1617 Ordinance"
+author: "Patrick Rosenkrantz Skov, Sebastian Slot Bernhardt and Clara Skov Drap"
+date: "2026-05-24"
+output: html_document
+---
+```{r setup, include=FALSE}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#Start by installing the neccesary packages.
+library(leaflet)
+library(readxl)
+library(dplyr)
+```
+
+Load the data from the Excel file, and create the map. 
+
+```{r map, echo=FALSE, warning=FALSE, message=FALSE, fig.width=10, fig.height=7}
+
+# 1. Load the data
+witch_data_early <- read_excel("data/Finalproject data1.xlsx")
+witch_data_late <- read_excel("data/Finalproject data1.xlsx", sheet = 2)
+
+# 2. Clean the data individually for both periods
+witch_data_early_clean <- witch_data_early %>%
+  mutate(
+    Latitude = as.numeric(gsub(",", ".", Latitude)),
+    Longitude = as.numeric(gsub(",", ".", Longitude))
+  ) %>%
+  filter(!is.na(Latitude) & !is.na(Longitude))
+
+witch_data_late_clean <- witch_data_late %>%
+  mutate(
+    Latitude = as.numeric(gsub(",", ".", Latitude)),
+    Longitude = as.numeric(gsub(",", ".", Longitude))
+  ) %>%
+  filter(!is.na(Latitude) & !is.na(Longitude))
+
+# 3. Build the interactive map with layers
+interactive_map <- leaflet() %>%
+  
+  # --- Background Map Layers ---
+  addTiles(group = "Standard Map") %>% 
+  addProviderTiles(providers$Esri.WorldImagery, group = "Satellite") %>% 
+  addProviderTiles(providers$CartoDB.Positron, group = "Light Map") %>%
+  
+  # Center the initial view over Denmark
+  setView(lng = 9.5, lat = 56, zoom = 6) %>% 
+  
+  # --- Data Layer for Period 1 (1609-1616) ---
+  addMarkers(
+    data = witch_data_early_clean,
+    lng = ~Longitude,  
+    lat = ~Latitude,   
+    popup = ~paste("<b>Name:</b>", Navn, "<br>", "<b>City:</b>", By),
+    label = ~Navn,
+    group = "1609-1616 Trials",
+    clusterOptions = markerClusterOptions() 
+  ) %>%
+  
+  # --- Data Layer for Period 2 (1620-1626) ---
+  addMarkers(
+    data = witch_data_late_clean,
+    lng = ~Longitude,  
+    lat = ~Latitude,   
+    popup = ~paste("<b>Name:</b>", Navn, "<br>", "<b>City:</b>", By),
+    label = ~Navn,
+    group = "1620-1626 Trials",
+    clusterOptions = markerClusterOptions() 
+  ) %>%
+  
+  # --- Layer Control Menu ---
+  addLayersControl(
+    baseGroups = c("Standard Map", "Satellite", "Light Map"),
+    overlayGroups = c("1609-1616 Trials", "1620-1626 Trials"),
+    options = layersControlOptions(collapsed = FALSE)
+  )
+
+# 4. Display the finalized map
+interactive_map
+```
