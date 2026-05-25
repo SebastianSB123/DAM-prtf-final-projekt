@@ -1,0 +1,27 @@
+[
+  {
+    "op": "core/column-move",
+    "columnName": "months_no_water",
+    "index": 0,
+    "description": "Move column months_no_water to position 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "months_no_water",
+    "index": 1,
+    "description": "Move column months_no_water to position 1"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "months_no_water",
+    "expression": "grel:value.replace(\"[\",\"\").replace(\"]\",\"\").replace(\" \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column months_no_water using expression grel:value.replace(\"[\",\"\").replace(\"]\",\"\").replace(\" \",\"\")"
+  }
+]
