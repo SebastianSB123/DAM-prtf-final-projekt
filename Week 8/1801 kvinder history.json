@@ -1,0 +1,1087 @@
+[
+  {
+    "op": "core/column-move",
+    "columnName": "erhverv",
+    "index": 0,
+    "description": "Move column erhverv to position 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "alder",
+    "index": 0,
+    "description": "Move column alder to position 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "koen",
+    "index": 0,
+    "description": "Move column koen to position 0"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "alder",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column alder using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "kvinde",
+                "l": "kvinde"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "indsidder og væver",
+          "Indsidder og Væver",
+          "væver og indsidder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væver"
+      },
+      {
+        "from": [
+          "Stuepige",
+          "stuepige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Stuepige"
+      },
+      {
+        "from": [
+          "Vanfør",
+          "vanfør"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Handicappet"
+      },
+      {
+        "from": [
+          "Inderste",
+          "inderste"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bonde på lejret jord "
+      },
+      {
+        "from": [
+          "Huus - Jomfrue",
+          "Huus Jomfrue"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Husjomfrue"
+      },
+      {
+        "from": [
+          "Væver",
+          "væver"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væver"
+      },
+      {
+        "from": [
+          "Spinderske",
+          "spinderske"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spindekone"
+      },
+      {
+        "from": [
+          "Indsidder",
+          "indsidder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bonde på lejret jord "
+      },
+      {
+        "from": [
+          "tjenestepige",
+          "Tjenestepige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjenestepige"
+      },
+      {
+        "from": [
+          "Tjener Forældrene",
+          "tjener Forældrene"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjener ved forældrene"
+      },
+      {
+        "from": [
+          "Kokkepige",
+          "kokkepige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kokkepige"
+      },
+      {
+        "from": [
+          "Inderste og Spindekone",
+          "inderste og spindekone"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spindekone"
+      },
+      {
+        "from": [
+          "Væverske",
+          "væverske"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væverske"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "kvinde",
+                "l": "kvinde"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Sye Pige",
+          "Syepige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Syerske"
+      },
+      {
+        "from": [
+          "Skræderpige",
+          "Skræderske",
+          "skrædderpige",
+          "syerske"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Syerske"
+      },
+      {
+        "from": [
+          "Skræderpige",
+          "Sye Pige",
+          "Syepige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Syerske"
+      },
+      {
+        "from": [
+          "Væverske",
+          "Wæwerske"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væver"
+      },
+      {
+        "from": [
+          "Væverpige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væver"
+      },
+      {
+        "from": [
+          "Skræderpige",
+          "Skræderske",
+          "skrædderpige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Syerske"
+      },
+      {
+        "from": [
+          "Huusjomfrue",
+          "Husjomfrue",
+          "husjomfru"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Husjomfru"
+      },
+      {
+        "from": [
+          "hospitalslem",
+          "Er Hospitals Lem",
+          "hospitals lem"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hospitalslem"
+      },
+      {
+        "from": [
+          "Væverske",
+          "Væver",
+          "Væverpige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væver"
+      },
+      {
+        "from": [
+          "Tjener ved forældrene",
+          "tjenende hos forældrene",
+          "tjener hos forældrene"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjener ved forældrene"
+      },
+      {
+        "from": [
+          "Skræderpige",
+          "Skræderske",
+          "skrædderpige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Syerske"
+      },
+      {
+        "from": [
+          "Spindekone",
+          "spinder",
+          "spindekone"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spindekone"
+      },
+      {
+        "from": [
+          "syer",
+          "syerske"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Syerske"
+      },
+      {
+        "from": [
+          "Spindekone",
+          "spindekone"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spindekone"
+      },
+      {
+        "from": [
+          "inderste og væverpige",
+          "Inderste og Vævpige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væver"
+      },
+      {
+        "from": [
+          "tjener som pige",
+          "tjener som pigen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Stuepige"
+      },
+      {
+        "from": [
+          "Tienestepige",
+          "Tjenestepige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Stuepige"
+      },
+      {
+        "from": [
+          "Wæwerske",
+          "wæwer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væver"
+      },
+      {
+        "from": [
+          "Huusholderske",
+          "husholderske"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Husholderske"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "kvinde",
+                "l": "kvinde"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "lever af almisse",
+          "Lever af Hænderne",
+          "lever af husnæring",
+          "lever af syning"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      },
+      {
+        "from": [
+          "Lever af Hænderne",
+          "lever af husnæring",
+          "lever af syning"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      },
+      {
+        "from": [
+          "Hun ernærer sig af Haand Arbeide",
+          "Nærer sig af Haandarbejde",
+          "ernærer sig af Haandarbejde"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      },
+      {
+        "from": [
+          "Tjener ved forældrene",
+          "tjene Forældrene",
+          "varter Forældrene"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjener ved forældrene"
+      },
+      {
+        "from": [
+          "lever af almisse",
+          "lever af at spinde",
+          "lever af syning"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      },
+      {
+        "from": [
+          "lever af almisse",
+          "lever af at spinde"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      },
+      {
+        "from": [
+          "Jordløs Huuskone",
+          "jordløs huusbeboer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Jordløs huskone"
+      },
+      {
+        "from": [
+          "tjene Forældrene",
+          "varter Forældrene"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjener ved forældrene"
+      },
+      {
+        "from": [
+          "Indsidder og Spinderske",
+          "inderste og spinderske"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spindekone"
+      },
+      {
+        "from": [
+          "Hun ernærer sig af Haand Arbeide",
+          "ernærer sig af Haandarbejde"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      },
+      {
+        "from": [
+          "Bryggerpige",
+          "bryggerspige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bryggerpige"
+      },
+      {
+        "from": [
+          "Nærer sig af Haandarbejde",
+          "ernærer sig af Haandarbejde"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "kvinde",
+                "l": "kvinde"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Lever af håndarbejde"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      },
+      {
+        "from": [
+          "Lever af håndarbejde"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      },
+      {
+        "from": [
+          "Inderste og Wæver",
+          "Inderste og Wæwer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væver"
+      },
+      {
+        "from": [
+          "Skrøbelig og nyder Almisse af Sognet",
+          "Vanvittig og nyder Almisse af Sognet"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Handicappet"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "kvinde",
+                "l": "kvinde"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Bege Vandfør og nyder Almisse af Sognet",
+          "Indsiddere og nyder Almisse af Sognet",
+          "Sengeliggende og nyder Almisse af Sognet"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Handicappet"
+      },
+      {
+        "from": [
+          "og Hun ved Spinden hvad hun kan",
+          "og hun fortjener ved Spind hvad hun kan"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      },
+      {
+        "from": [
+          "opholder sig hos Forældrerne",
+          "opholder sig hos forældrene"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bor hos hendes forældre"
+      },
+      {
+        "from": [
+          "ernærer sig af syning",
+          "ernærer sig ved at Spinde"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spindekone"
+      },
+      {
+        "from": [
+          "Har alt frit paa Gaarden",
+          "Har ligeledes alt frit paa Gaarden"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bor hos hendes forældre"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "kvinde",
+                "l": "kvinde"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Jordløs huskone",
+          "Jordløs Huusmand, Skræder og Spillemand"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Jordløs bonde"
+      },
+      {
+        "from": [
+          "lever af sine midler",
+          "lever af sine midler og familiens understøttelse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af sine midler"
+      },
+      {
+        "from": [
+          "Nærer sig og Moder ved at væve"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væver"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "kvinde",
+                "l": "kvinde"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Amme",
+          "Svag"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Handicappet"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "kvinde",
+                "l": "kvinde"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Halter og nærer sig ved Syening og Dagleie",
+          "Nærer sig og Moder wed at gaae i Dagleje",
+          "Nærer sig ved Skrædersyning"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Syerske"
+      },
+      {
+        "from": [
+          "Gaardbeboer",
+          "bondekone, gaardbeboer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Jordløs bonde"
+      },
+      {
+        "from": [
+          "Lever af håndarbejde",
+          "lever af hendes midler"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lever af håndarbejde"
+      },
+      {
+        "from": [
+          "Plejer den Gamle, af hvem hun er opfødt",
+          "disse unge Folk tjener den gamle Fader"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjener ved forældrene"
+      },
+      {
+        "from": [
+          "Almisselem",
+          "vanvittig Almisselem"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Handicappet"
+      },
+      {
+        "from": [
+          "Vanvittig og nyder af de Fattiges Penge",
+          "vanvittig Almisselem"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Handicappet"
+      },
+      {
+        "from": [
+          "Underholdes af familien",
+          "ligger ved Sengen, og Underholdes af sin Broder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjener ved forældrene"
+      },
+      {
+        "from": [
+          "Huusbeboerske med Jord til",
+          "huusbeboer med jord"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bonde med jord"
+      },
+      {
+        "from": [
+          "Har Skade i fødderne lever af [bemte Hospitals Hold]",
+          "krøbling, har Hospitalshold"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Handicappet"
+      },
+      {
+        "from": [
+          "Vandfør og nyder Almisse",
+          "Vanvittig og nyder af de Fattiges Penge"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Handicappet"
+      },
+      {
+        "from": [
+          "Konen syer og gaaer i Dagleie",
+          "gaaer i Dagleie"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Syerske"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "kvinde",
+                "l": "kvinde"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "tjener faderen",
+          "tjener andetsteds",
+          "tjener husbonden",
+          "tjener moderen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjener ved forældrene"
+      },
+      {
+        "from": [
+          "tjener faderen",
+          "tjener husbonden",
+          "tjener moderen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjener ved forældrene"
+      },
+      {
+        "from": [
+          "tjener faderen",
+          "tjener andetsteds",
+          "tjener moderen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjener ved forældrene"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  }
+]
